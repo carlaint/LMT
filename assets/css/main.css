@@ -1690,6 +1690,14 @@
 		margin: 0 0 2em 0;
 	}
 
+	h1i {
+		font-size: 2.75em;
+		font-weight: 700;
+		line-height: 0.3;
+		margin: 0 0 1em 0;
+		letter-spacing: -0.035em;
+	}
+
 	h1 {
 		font-size: 2.75em;
 		font-weight: 700;
