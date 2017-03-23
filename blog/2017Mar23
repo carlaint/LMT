@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<link rel="icon" href="images/logo1.png">
+		<title>Data Science - LMT blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo1.png" alt="" /></span><span class="title">Lame Man's Terms</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="datascience.html">Data Science</a></li>
+							<li><a href="dataviz.html">Data Viz</a></li>
+							<li><a href="dataset.html">Datasets</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Posts tagged "Data Science"</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<p style="font-size:11px;">(image taken from Bloomberg Businessweek Europe, available <a href="https://www.pressreader.com/bahrain/bloomberg-businessweek-europe/20160711/282462823250841">here</a>.)</p>
+<p>&nbsp;</p>
+<p>I usually start my posts with a motivating picture.</p>
+<p>This cartoon from Bloomberg encapsulates how Trump wants to do trade with other countries:  He basically wants to kick them out of America.  Trump says that American workers are losing their jobs because they are being outsourced to other countries like Mexico and China.</p>
+<p>Let's think of a basic case: steel.  Production of steel is cheaper in China, rather than the US.  Because of free trade and globalization, Chinese steel can make its way to the US and still come out cheaper than steel produced in America.  As a result, consumers that prefer to buy cheaper will choose to buy Chinese steel, at the expense of American steelworkers.</p>
+<p>So if you've been reading Trump <a href="https://www.nytimes.com/2017/01/23/us/politics/tpp-trump-trade-nafta.html">repealing TPP</a> (Trans-Pacific Partnership) and <a href="http://www.cnbc.com/2017/01/23/trump-to-sign-executive-order-to-renegotiate-nafta-and-intent-to-leave-tpp.html">NAFTA</a> (North-American Free Trade Agreement), that's essentially his point.  There are a lot of products that one can think of wherein the common American worker is losing its edge: car production, garments,  electronics, etc.  If Mr. Trump promised to bring back jobs to America, then he must "kill the competition."</p>
+<p>To be fair, there have been times when these free trade agreements with America have been abused.  For instance, some countries build manufacturing plants in Mexico, and in turn uses <a href="http://www.cnbc.com/2016/09/08/chinese-co-shipped-aluminum-through-mexico-to-evade-tariffs-us-rivals-claim.html">Mexico's NAFTA agreement with the US in order to circumvent quotas</a>.  And if there is one thing that Mr. Trump hates, it is being outsmarted.</p>
+<p>But in any case, Trump's view on trade is this: <span style="color:#ff0000;"><strong>These free trade agreements are causing inequality in America.</strong> </span> The richest Americans (the 1%) are pulling away at an exponential rate while the common worker (whose jobs are lost or threatened due to outsourcing) is left behind.</p>
+<p>I was asked to investigate whether this claim is justified.</p>
+<p>https://public.tableau.com/profile/carlaint#!/vizhome/2017-02-09GlobalizationInequalityMeasures/Dashboard1</p>
+<p>https://carlaint.github.io/myweb/</p>		</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="mailto:cintal@imf.org">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="http://twitter.com/carlaint" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://public.tableau.com/profile/carlaint#!/" class="icon style2 fa-asterisk"><span class="label">Tableau</span></a></li>
+									<li><a href="https://www.linkedin.com/in/carlaintal/" class="icon style2 fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/carlaint/" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="mailto:cintal@imf.org" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; LMT. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
