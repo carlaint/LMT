@@ -1,2 +1,2 @@
-# lmt
-lame man terms blog
+# In "Lame" Man's Terms...
+[a jargon-free understanding of the world]
