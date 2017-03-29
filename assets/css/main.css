@@ -2634,10 +2634,10 @@
 					-webkit-pointer-events: none;
 					-ms-pointer-events: none;
 					pointer-events: none;
-					-moz-transition: background-color 0.2s ease, opacity 0.2s ease;
-					-webkit-transition: background-color 0.2s ease, opacity 0.2s ease;
-					-ms-transition: background-color 0.2s ease, opacity 0.2s ease;
-					transition: background-color 0.2s ease, opacity 0.2s ease;
+					-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+					transition: background-color 0.5s ease, opacity 0.5s ease;
 					content: '';
 					display: block;
 					position: absolute;
@@ -2647,7 +2647,7 @@
 					height: 100%;
 					opacity: 1.0;
 					z-index: 1;
-					opacity: 0.8;
+					opacity: 1.0;
 				}
 
 				.tiles article > .image:after {
