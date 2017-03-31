@@ -61,12 +61,11 @@
 <p>For as long as I remember, international institutions like the World Bank and the IMF have grouped countries either by <b> income</b> or by <b> region.</b> </p>
 <p>That is to say that poor countries are in a different group to the emerging, and advanced economies.  Meanwhile, Asian economies are grouped in one cluster, while Europe is another.  This has been the way that policymaking has been set-up, and it has never changed. </p>
 <p>My argument is that these groupings warrant a fresh perspective.  I would think it makes sense, particularly given the developments in the world today, we ought to think about whether these country groups are still relevant, or is it an outdated view of the world?</p>
-<p>Inspired by what I learned for General Assembly's <a href="https://generalassemb.ly/education/data-science/washington-dc"> data science course,</a> I thought I'd investigate this grouping using machine learning techniques. </p>
+<p>Inspired by what I learned from General Assembly's <a href="https://generalassemb.ly/education/data-science/washington-dc"> data science course,</a> I thought I'd investigate this grouping using machine learning techniques. </p>
 <p>The traditional way of clustering countries was to rank all countries by income and set a threshold that defines high-middle-low to build the clusters.  My proposed method, using unsupervised machine learning, was to take an alternative dataset that has more information than a country's income and plug it into the "black box" of machine learning to discover the clusters.  Ideally, the results of the new model would converge with the old. I provide a schematic of the methods below. </p>
 <span class="image main"><img src="images/Clusters.png" alt="model" /></span>
 <p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my <a href="https://github.com/carlaint/sector-cluster"> github</a>.  To summarize, I tried two popular clustering methods, K-Means and Hierarchical, and I ran the cluster analysis every decade during the period 1970-2015. Consistently, I was able to find three clusters in 1970, 1980, 1990, and 2000, and a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
-<pre><code>
-Clustering Results:
+<pre><code>Clustering Results:
 	K-Means      Hierarchical
 1970s       3             3
 1980s       3             3
