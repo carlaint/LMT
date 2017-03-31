@@ -64,9 +64,16 @@
 <p>Inspired by what I learned for General Assembly's <a href="https://generalassemb.ly/education/data-science/washington-dc"> data science course,</a> I thought I'd investigate this grouping using machine learning techniques. </p>
 <p>The traditional way of clustering countries was to rank all countries by income and set a threshold that defines high-middle-low to build the clusters.  My proposed method, using unsupervised machine learning, was to take an alternative dataset that has more information than a country's income and plug it into the "black box" of machine learning to discover the clusters.  Ideally, the results of the new model would converge with the old. I provide a schematic of the methods below. </p>
 <span class="image main"><img src="images/Clusters.png" alt="model" /></span>
-<p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my  <a href="https://github.com/carlaint/sector-cluster"> github</a>.  What I found was quite interesting.	Essentially, I tried two popular clustering methods, K-Means and Hierarchical and found three clusters for the years 1970-2015.  You can view the results below.  Consistently, three clusters through the years, with a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
-<span class="image main"><img src="images/Clusters2.png" alt="results" style="width:60%;height:60%;"/></span>
-<p> When I see this result, I immediately think:  <span style="color:#f2849e;">three clusters are income groups (High/Middle/Low). </span> Meanwhile, <span style="color:#f2849e;"> six clusters means regional groups. </span> It's easy to verify this hypothesis via simple Pearson correlation. You can find the results of the correlation below. </p>
+<p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my <a href="https://github.com/carlaint/sector-cluster"> github</a>.  To summarize, I tried two popular clustering methods, K-Means and Hierarchical, and I ran the cluster analysis every decade during the period 1970-2015. Consistently, I was able to find three clusters in 1970, 1980, 1990, and 2000, and a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
+<pre><code>
+	K-Means      Hierarchical
+1970s       3             3
+1980s       3             3
+1990s       3             3  
+2000s       3             3
+2010s       6             3
+</code></pre>	
+<p> I actually like this result, because it immediately suggests that  <span style="color:#f2849e;">three clusters are perhaps income groups (High/Middle/Low)(?) </span> Meanwhile, the <span style="color:#f2849e;"> six clusters may indicate regional groups. </span> What's good is that, it's easy to verify this hypothesis via simple Pearson correlation. I did exactly that.</p>
 <pre><code>Correlation of Clusters with Income
 1970s: 0.699225355443
 1980s: 0.6530658344
@@ -87,17 +94,17 @@ Correlation of Clusters with different sectors of the economy.
 2010 ISICGH: (KM) 0.0693089160196
 
 </code></pre>	
-<p> There are three main findings that you can readily see from the picture.	
+<p> To cut to the chase, the results are obvious and can be summarized into three main points.	
 <ul>
 <li><p style="padding-left:30px;"> From 70% correlation in the 1970s, there is hardly any link between clusters and income after 2010. <span style="color:#c75b9b;"><b>The relationship between income and clusters have declined over time. </b></span></li>
 <li><p style="padding-left:30px;"> On the finding of 6 clusters in 2010, there seems to be no <span style="color:#c75b9b;"><b>link between the clusters and regional groups.</b></span></li>
 <li><p style="padding-left:30px;"> There seems to be a link between clusters and "ISIC I," which turns out to be<span style="color:#c75b9b;"><b> transportation and ICT networks. </b></span></li>
 						</ul>
 	
-<p>The results of my data experiment suggests that </p>
+<p>I find this to be quite compelling and controversial.  For one, we have been classifying countries using outdated groups.  This can have a huge implication in the operational work of multilateral institutions today. The message of my data experiment being: </p>
 <h3> <span style="color:#8499e7;">We ought to consider that income or regional groupings may not be representative of how countries cluster today.  </span> </h3>
 							
-<p>Countries may be interconnected in some other way, and given developments in technology and infrastructure, the results suggest that countries may organize themselves based on the strengths of their information and trade networks.  This is the prelude to a study that I am making on graph theory -- which is to map country trade networks and see their evolution.  More on this in the next few months!</p>
+<p>An alternative explanation on the clusters may be found by looking more into the country, rather than income. Given developments in technology and infrastructure, the results of the experiment suggest that countries may organize themselves based on the strengths of their information and trade networks.  So tell me again, <i> why are we still classifying the world by income? </i> </p>
 
 							
 				<div id="disqus_thread"></div>
