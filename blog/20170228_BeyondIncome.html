@@ -67,22 +67,38 @@
 <p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my  <a href="https://github.com/carlaint/sector-cluster"> github</a>.  What I found was quite interesting.	Essentially, I tried two popular clustering methods, K-Means and Hierarchical and found three clusters for the years 1970-2015.  You can view the results below.  Consistently, three clusters through the years, with a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
 <span class="image main"><img src="images/Clusters2.png" alt="results" /></span>
 <p> When I see this result, I immediately think:  <span style="color:#f2849e;">three clusters are income groups (High/Middle/Low). </span> Meanwhile, <span style="color:#f2849e;"> six clusters means regional groups. </span> It's easy to verify this hypothesis via simple Pearson correlation. You can find the results of the correlation below. </p>
-<span class="image main"><img src="images/Clusters3.png" alt="results" /></span>	
+<pre><code>Correlation of Clusters with Income
+1970s: 0.699225355443
+1980s: 0.6530658344
+1990s: 0.628873055818
+2000s: 0.544806898754
+2010s: (KM) 0.016198906498
+2010s: (HC) 0.367918615678
+
+Correlation of Clusters with Region (Africa, Europe, Americas, Asia, etc.)
+2010s: (KM) 0.082789964173
+
+Correlation of Clusters with different sectors of the economy.
+2010 ISICAB: (KM) 0.161243735252
+2010 ISICF: (KM) 0.20600142179
+2010 ISICCE: (KM) 0.255586347709
+2010 ISICJP: (KM) 0.341363230757
+2010 ISICI: (KM) 0.505339423178
+2010 ISICGH: (KM) 0.0693089160196
+
+</code></pre>	
 <p> There are three main findings that you can readily see from the picture.	
-	
-	
-<h3> <span style="color:#8499e7;">lorem ipsum lorem ipsum lorem ipsum  </span> </h3>lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-<p>lorem ipsum lorem ipsum lorem ipsum </p>
-<p>lorem ipsum lorem ipsum   unorder(ul) or order(ol) list</p>
 <ul>
-<li><p style="padding-left:30px;"> lorem ipsum  <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum lorem ipsum </li>
-<li><p style="padding-left:30px;"> lorem ipsum  <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum  <a href="http://www.bbc.com/news/business-36575755">lorem ipsum </a> lorem ipsum </li>
-<li><p style="padding-left:30px;"> lorem ipsum <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum </li>
+<li><p style="padding-left:30px;"> From 70% correlation in the 1970s, there is hardly any link between clusters and income after 2010. <span style="color:#c75b9b;"><b>The relationship between income and clusters have declined over time. </b></span></li>
+<li><p style="padding-left:30px;"> On the finding of 6 clusters in 2010, there seems to be no <span style="color:#c75b9b;"><b>link between the clusters and regional groups.</b></span></li>
+<li><p style="padding-left:30px;"> There seems to be a link between clusters and "ISIC I," which turns out to be<span style="color:#c75b9b;"><b> transportation and ICT networks. </b></span></li>
 						</ul>
-<p>lorem ipsum lorem ipsum <p>
-							<p></p>
-							<p></p>
-<p> Conclusion <u> lorem ipsum lorem ipsum lorem ipsum </u>.  lorem ipsum lorem ipsum  <span style="color:#f2849e;">lorem ipsum lorem ipsum </span> lorem ipsum lorem ipsum  <span style="color:#f2849e;"> lorem ipsum lorem ipsum </span>lorem ipsum lorem ipsum <h4> main message here </h4>  lorem ipsum lorem ipsum <p>							
+	
+<p>The results of my data experiment suggests that </p>
+<h3> <span style="color:#8499e7;">We ought to consider that income or regional groupings may not be representative of how countries cluster today.  </span> </h3>
+							
+<p>Countries may be interconnected in some other way, and given developments in technology and infrastructure, the results suggest that countries may organize themselves based on the strengths of their information and trade networks.  This is the prelude to a study that I am making on graph theory -- which is to map country trade networks and see their evolution.  More on this in the next few months!</p>
+
 							
 				<div id="disqus_thread"></div>
 <script>
