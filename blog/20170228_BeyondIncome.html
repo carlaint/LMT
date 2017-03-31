@@ -65,7 +65,7 @@
 <p>The traditional way of clustering countries was to rank all countries by income and set a threshold that defines high-middle-low to build the clusters.  My proposed method, using unsupervised machine learning, was to take an alternative dataset that has more information than a country's income and plug it into the "black box" of machine learning to discover the clusters.  Ideally, the results of the new model would converge with the old. I provide a schematic of the methods below. </p>
 <span class="image main"><img src="images/Clusters.png" alt="model" /></span>
 <p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my  <a href="https://github.com/carlaint/sector-cluster"> github</a>.  What I found was quite interesting.	Essentially, I tried two popular clustering methods, K-Means and Hierarchical and found three clusters for the years 1970-2015.  You can view the results below.  Consistently, three clusters through the years, with a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
-<span class="image main"><img src="images/Clusters2.png" alt="results" /></span>
+<span class="image main"><img src="images/Clusters2.png" alt="results" style="width:60%;height:60%;"/></span>
 <p> When I see this result, I immediately think:  <span style="color:#f2849e;">three clusters are income groups (High/Middle/Low). </span> Meanwhile, <span style="color:#f2849e;"> six clusters means regional groups. </span> It's easy to verify this hypothesis via simple Pearson correlation. You can find the results of the correlation below. </p>
 <pre><code>Correlation of Clusters with Income
 1970s: 0.699225355443
