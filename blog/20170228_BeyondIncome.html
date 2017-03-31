@@ -58,11 +58,19 @@
 							<span class="image main"><img src="images/Structural Clusters.002.jpeg" alt="Beyond Income: A new structural classification of the world" style="width:60%;height:60%;" /></span>
 							<p style="font-size:11px;">(image taken from my github, whole presentation is available <a href="http://res.cloudinary.com/general-assembly-profiles/image/upload/v1488557838/nd1h7mqjybjyucs5k4xe.pdf">here</a>.)</p>
 <p>&nbsp;</p>
-<p>lorem ipsum lorem ipsum </p>
-<p>lorem ipsum lorem ipsum </p>
-<p>lorem ipsum </p>
-<p>lorem ipsum lorem ipsum lorem ipsum <a href="https://www.nytimes.com/2017/01/23/us/politics/tpp-trump-trade-nafta.html">link here</a> absdsadad <a href="http://www.cnbc.com/2017/01/23/trump-to-sign-executive-order-to-renegotiate-nafta-and-intent-to-leave-tpp.html">link2</a>  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum <a href="http://www.cnbc.com/2016/09/08/chinese-co-shipped-aluminum-through-mexico-to-evade-tariffs-us-rivals-claim.html">lorem ipsum lorem ipsum lorem ipsum </a>.  lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+<p>For as long as I remember, international institutions like the World Bank and the IMF have grouped countries either by <b> income</b> or by <b> region.</b> </p>
+<p>That is to say that poor countries are in a different group to the emerging, and advanced economies.  Meanwhile, Asian economies are grouped in one cluster, while Europe is another.  This has been the way that policymaking has been set-up, and it has never changed. </p>
+<p>My argument is that these groupings warrant a fresh perspective.  I would think it makes sense, particularly given the developments in the world today, we ought to think about whether these country groups are still relevant, or is it an outdated view of the world?</p>
+<p>Inspired by what I learned for General Assembly's <a href="https://generalassemb.ly/education/data-science/washington-dc"> data science course,</a> I thought I'd investigate this grouping using machine learning techniques. </p>
+<p>The traditional way of clustering countries was to rank all countries by income and set a threshold that defines high-middle-low to build the clusters.  My proposed method, using unsupervised machine learning, was to take an alternative dataset that has more information than a country's income and plug it into the "black box" of machine learning to discover the clusters.  Ideally, the results of the new model would converge with the old. I provide a schematic of the methods below. </p>
+<span class="image main"><img src="images/Clusters.png" alt="model" /></span>
+<p> I will skip all the technicalities, but you may view all the details on the models tested and the dataset on my  <a href="https://github.com/carlaint/sector-cluster"> github</a>.  What I found was quite interesting.	Essentially, I tried two popular clustering methods, K-Means and Hierarchical and found three clusters for the years 1970-2015.  You can view the results below.  Consistently, three clusters through the years, with a slight divergence in 2010 (6 clusters for K-Means, 3 clusters for Hierarchical). </p>
+<span class="image main"><img src="images/Clusters2.png" alt="results" /></span>
+<p> When I see this result, I immediately think:  <span style="color:#f2849e;">three clusters are income groups (High/Middle/Low). </span> Meanwhile, <span style="color:#f2849e;"> six clusters means regional groups. </span> It's easy to verify this hypothesis via simple Pearson correlation. You can find the results of the correlation below. </p>
+<span class="image main"><img src="images/Clusters3.png" alt="results" /></span>	
+<p> There are three main findings that you can readily see from the picture.	
+	
+	
 <h3> <span style="color:#8499e7;">lorem ipsum lorem ipsum lorem ipsum  </span> </h3>lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 <p>lorem ipsum lorem ipsum lorem ipsum </p>
 <p>lorem ipsum lorem ipsum   unorder(ul) or order(ol) list</p>
