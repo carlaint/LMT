@@ -59,14 +59,31 @@
 							<h1i>Evolution of Trade Networks</h1i>
 							<h4>April 3, 2017</h4>
 							<p>&nbsp;</p>
-<p>One of the interesting projects that I got to dabble in here at the IMF is graph theory.  I read up on networks, and implemented.</p>
-<p>lorem ipsum lorem ipsum </p>
-<p>lorem ipsum </p>
-<p>lorem ipsum lorem ipsum lorem ipsum <a href="https://www.nytimes.com/2017/01/23/us/politics/tpp-trump-trade-nafta.html">link here</a> absdsadad <a href="http://www.cnbc.com/2017/01/23/trump-to-sign-executive-order-to-renegotiate-nafta-and-intent-to-leave-tpp.html">link2</a>  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum <a href="http://www.cnbc.com/2016/09/08/chinese-co-shipped-aluminum-through-mexico-to-evade-tariffs-us-rivals-claim.html">lorem ipsum lorem ipsum lorem ipsum </a>.  lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<h3> <span style="color:#8499e7;">lorem ipsum lorem ipsum lorem ipsum  </span> </h3>lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-<p>lorem ipsum lorem ipsum lorem ipsum </p>
-<p>lorem ipsum lorem ipsum   unorder(ul) or order(ol) list</p>
+<p>I was introduced to network analysis by a <a href="https://www.ted.com/watch/ted-institute/ted-bcg/min-zhu-interconnectivity-the-new-structure-of-the-world-economy">TED Talk that I prepared for my former boss.</a></p>
+<p>He talked about the results of an <a href="https://www.ted.com/watch/ted-institute/ted-bcg/min-zhu-interconnectivity-the-new-structure-of-the-world-economy">IMF paper in 2011 on interconnectedness and clusters.</a> To prepare for his TED talk, I had to read the paper, and that was my introduction to graph theory. At some point, my former boss (and his predecessor) wanted the paper to be updated, but the institution had no plans of doing so.  As his RA who also happened to be curious about this methodology, I asked to dabble in it.  I liked this experiment because it enabled me to do the research on my own time.  It was not like there was a due date because the results were going to be presented to the Board-- that gave me less pressure in case my experiment failed.  This also gave me time to learn as much as I can about graph theory, and test a couple of methods and software. My (new) boss had no expectations either; after all, it took a lot of resources to build that paper in 2011.  Meanwhile, I was a lowly RA singlehandedly trying to make a version of this experiment. </p>
+<p>However, my advantage in 2017 is that I have technology on my side.  Developments in data science have made it easier for me to run algorithms while I focus on understanding the underlying theory.  Technology is amazing that way. So using these new tools and given a free hand to experiment, I used the IMF 2011 paper as an inspiration to visualize the cluster structure of the global economy.  So I didn't really replicate it.  I'd like to think I added a few more dimensions to the analysis.  First off, I only looked into trade networks.  I am beginning to think that I have this comparative research advantage on topics regarding trade.  And I actually find it a very fun and fascinating topic to get my hands dirty with.  In this exercise I examined trade flows (exports plus imports) from one country to each of its trading partners. What's nice about trade data is that I can go deeper and disaggregate my results by product.  So I can actually ask questions like, how much did China trade with the US in year 2015 for leather bags.  I have those results too, but those detailed stuff will probably come later if I write them up into a working paper.</p>
+<p>Another value added to my analysis is that I added the time dimension.  I used three snapshots, 1995, 2005, and 2015, to compare how trade flows have changed through time.  As in many data science projects, the data prep takes up most of the time.  Sometimes, I get so excited with the experiment and wish that I can get the data prep over and done with, but it's part of the deal.  So perhaps I can outline here the steps of my data prep and analysis.  One thing to note is that I didn't use python in this exercise.  I used STATA (every IMF economist's best friend) and this easy cool tool called Gephi. But, as always, my <a href="https://github.com/carlaint/Trade-Networks"> github </a>will have the full information.
+<ul>
+<li><p style="padding-left:30px;"> My data is from <a href="http://unctadstat.unctad.org/EN/">UNCTAD</a>. I was introduced to their trade matrix by a colleague here at the IMF.  You can generally see how one country trades with 200+ countries (and country groups) for any item under the sun.</li>
+<li><p style="padding-left:30px;"> Data transformation (spelling, conversion, etc.) was in STATA.  One can loop the code for all 10 sectors so the coding wasn't that hard.  But the waiting was. After all the magic of data transformation, you should be able to whip up a data in this format (take note that "weight" is a number from 0 to 1, which describes how heavy you trade with the target country:)  </li>
+<pre><code>	Source		Target		weight
+0	Algeria		Lithuania	0.01
+1	Argentina	Australia	0.02
+2	Argentina	Belgium		0.01
+3	Argentina	Bolivia		0.01
+4	Argentina	Brazil		0.18
+5	Argentina	Canada		0.01
+6	Argentina	Chile		0.07
+7	Argentina	China		0.05
+8	Argentina	ChinaHongKong	0.01
+
+*The thing to note here is that you will come up with a very dense network, just imagine each country being connected to at least 200 countries.
+*So for purposes of simplification, I eliminated those with weights near-zero.  Example, if Russia trades with the Cook Islands with a value of 0.0001, that connection is eliminated.  This leaves me with a network which I can work with for analysis.
+*Suggestion for further study: if one were to study small island states (and I have done work on them before too), one can just filter on these near-zero weights and analyze them separately. But I don't cover them here.
+</code></pre>	
+<li>I used this neat little freeware called Gephi. Free doesn't mean powerless.  This is an awesome tool with cool functionalities, i.e., it can give you the statistics off-hand, but it took me a number of youtube videos to come up with my desired visualization.  I did a number of formatting tweaks, like making sure that Gephi reads my data as an undirected graph.  <i> A directed graph is one-way, but since I was using data from both ways (exports and imports) it had to be undirected.  One can figure this out from playing with the tool for a while, plus watching youtube tutorials.  I suggest the one by <a href="https://www.youtube.com/watch?v=HJ4Hcq3YX4k"> Jen Golbeck </a></i>. There was a point I even tracked her down at UMd and emailed her!</li>
+</ul>
+							<p>Here below are the results of my</p>
 							<p style="font-size:11px;">All images are the author's own.</p>
 							<h3>1995</h3>
 							<span class="image main"><img src="images/1995 all.png" alt="Trade flows in 1995" style="width:90%;height:90%;" /></span>
@@ -75,11 +92,7 @@
 							<h3>2015</h3>
 							<span class="image main"><img src="images/2015 all.png" alt="Trade flows in 1995" style="width:90%;height:90%;" /></span>
 							
-							<ul>
-<li><p style="padding-left:30px;"> lorem ipsum  <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum lorem ipsum </li>
-<li><p style="padding-left:30px;"> lorem ipsum  <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum  <a href="http://www.bbc.com/news/business-36575755">lorem ipsum </a> lorem ipsum </li>
-<li><p style="padding-left:30px;"> lorem ipsum <span style="color:#c75b9b;"><b>lorem ipsum </b></span>lorem ipsum </li>
-						</ul>
+							
 <p>lorem ipsum lorem ipsum <p>
 							<p></p>
 							<p></p>
