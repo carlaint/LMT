@@ -61,11 +61,11 @@
 							<p>&nbsp;</p>
 <p>I was introduced to network analysis by a <a href="https://www.ted.com/watch/ted-institute/ted-bcg/min-zhu-interconnectivity-the-new-structure-of-the-world-economy">TED Talk that I prepared for my former boss.</a></p>
 <p>He talked about the results of an <a href="https://www.ted.com/watch/ted-institute/ted-bcg/min-zhu-interconnectivity-the-new-structure-of-the-world-economy">IMF paper in 2011 on interconnectedness and clusters.</a> To prepare for his TED talk, I had to read the paper, and that was my introduction to graph theory. At some point, my former boss (and his predecessor) wanted the paper to be updated, but the institution had no plans of doing so.  As his RA who also happened to be curious about this methodology, I asked to dabble in it.  </p>
-<p>I used the IMF 2011 paper as an inspiration for my experiment, so I didn't really replicate it.  Instead, I added a few more dimensions to the analysis.  First off, I only looked into trade networks.  I am beginning to think that I have this comparative research advantage on topics regarding trade.  In this exercise I examined trade flows (exports plus imports) from one country to each of its trading partners. </p>
+<p>I used the IMF 2011 paper as an inspiration for my experiment, so I didn't really replicate it.  Instead, I added a few more dimensions to the analysis.  First off, I only looked into trade networks.  In this exercise I examined trade flows (exports plus imports) from one country to each of its trading partners. </p>
 <p>Second, I added a time dimension.  I used three snapshots, 1995, 2005, and 2015.  Below is an outline of my data prep and analysis.  One thing to note is that I didn't use python.  I used STATA (every IMF economist's best friend) and this easy cool tool called Gephi. But, as always, my <a href="https://github.com/carlaint/Trade-Networks"> github </a>will have the full information.
 <ul>
-<li><p style="padding-left:30px;"> My data is from <a href="http://unctadstat.unctad.org/EN/">UNCTAD</a>. I was introduced to their trade matrix by a colleague here at the IMF.  You can generally see how one country trades with 200+ countries (and country groups) for any item.</li>
-<li><p style="padding-left:30px;"> Data transformation (spelling, conversion, etc.) was in STATA.  One can loop the code for all 10 sectors so the coding wasn't that hard, but the waiting was. After all the magic of data transformation, you should be able to whip up a data in this format (take note that "weight" is a number from 0 to 1, which describes how heavy you trade with the target country:)  </li>
+<li><p style="padding-left:30px;"> My data is from <a href="http://unctadstat.unctad.org/EN/">UNCTAD</a>. I was introduced to their trade matrix by a colleague here at the IMF.  You can generally see how one country trades with 200+ countries (and country groups) for any good.</li>
+<li><p style="padding-left:30px;"> Data transformation (spelling, conversion, etc.) was in STATA.  One can loop the code for all 10 sectors so the coding wasn't that hard, but the waiting was. After all the magic of data transformation, you should be able to whip up a data in this format (take note that "weight" is a number from 0 to 1, which describes how heavy you trade with the target country):  </li>
 <pre><code>	Source		Target		weight
 0	Algeria		Lithuania	0.01
 1	Argentina	Australia	0.02
@@ -79,9 +79,11 @@
 
 *The thing to note here is that you will initially come up with a very dense network, 
 just imagine each country being connected to at least 200 countries.
-*So for purposes of simplification, I eliminated those with weights near-zero
+
+*So for purposes of simplification, I eliminated those with weights near-zero.
 Example, if Russia trades with the Cook Islands with a value of 0.0001, that connection is eliminated.  
 This leaves me with a network which I can work with for analysis.
+
 *Suggestion for further study: if one were to study small island states (and I have done work on them before too), 
 one can just filter on these near-zero weights and analyze them separately. But I don't cover them here.
 </code></pre>	
@@ -96,13 +98,14 @@ one can just filter on these near-zero weights and analyze them separately. But 
 							<h3>2015</h3>
 							<span class="image main"><img src="images/2015 all.png" alt="Trade flows in 1995" style="width:90%;height:90%;" /></span>
 							
-							<h4>Here is a summary of observations. </h4>
+							<h4>Here is a summary of observations</h4>
 <ul>
-<li><p style="padding-left:30px;"> In 1995, most trade to Asia is coursed through Japan.  <span style="color:#f2849e;">Japan was the gateway to Asia in the 1990s.  That has drastically changed in 2015.</span></li>
-<li><p style="padding-left:30px;"> The difference of 2005 and 2015  <span style="color:#f2849e;">trade between US and Mexico has increased substantially </span> (if you follow current events, that's most probably <a href="https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement">NAFTA</a>). No wonder Mr. Trump is upset! </li>
-	<li><p style="padding-left:30px;"><span style="color:#f2849e;">Stronger EU integration, </span> which used to be dominated by Germany in 1995, but now it seems like trade is more fairly integrated within the region. </li>
-<li><p style="padding-left:30px;">  <span style="color:#f2849e;">Africa doesn't seem trade heavily to the rest of the world.</span>  Maybe interesting to look into trade among themselves, within the region.	</li>
-	<li><p style="padding-left:30px;"> Any other thoughts? Add to the discussion!</li>
+<li><p style="padding-left:30px;">In 1995, most trade to Asia is coursed through Japan.  <span style="color:#f2849e;">Japan was the gateway to Asia in the 1990s.  That has drastically changed in 2015.</span></li>
+<li><p style="padding-left:30px;">The difference of 2005 and 2015  <span style="color:#f2849e;">trade between US and Mexico has increased substantially </span> (if you follow current events, that's most probably <a href="https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement">NAFTA</a>). No wonder Mr. Trump is upset! </li>
+<li><p style="padding-left:30px;"><span style="color:#f2849e;">Stronger EU integration, </span> which used to be dominated by Germany in 1995, but now it seems like trade is more fairly integrated within the region. </li>
+<li><p style="padding-left:30px;"><span style="color:#f2849e;">Africa doesn't seem trade heavily to the rest of the world.</span>  Maybe interesting to look into trade among themselves, within the region.	</li>
+<li><p style="padding-left:30px;">On communities formed: In 1995 and 2005, there were only two groups found.  An EU cluster and the rest of the world. <span style="color:#f2849e;"> In 2015 it seems like a third cluster is emerging, as the Asian cluster led by China seems to break away.</span></li>
+<li><p style="padding-left:30px;"> Any other thoughts? Add to the discussion!</li>
 							</ul>							
 				
 							
