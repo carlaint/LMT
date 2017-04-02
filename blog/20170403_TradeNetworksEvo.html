@@ -65,7 +65,7 @@
 <p>Second, I added a time dimension.  I used three snapshots, 1995, 2005, and 2015.  Below is an outline of my data prep and analysis.  One thing to note is that I didn't use Python.  I used STATA (every IMF economist's best friend) and this easy cool tool called Gephi. But, as always, my <a href="https://github.com/carlaint/Trade-Networks"> github </a>will have the full information.
 <ul>
 <li><p style="padding-left:30px;"> My data source is <a href="http://unctadstat.unctad.org/EN/">UNCTAD</a>. I was introduced to their merchandise trade matrix by a colleague here at the IMF.  You can generally map how one country trades with 200+ countries (and country groups) for any product.</li>
-<li><p style="padding-left:30px;"> Data transformation (spelling, data reshape, etc.) was in STATA.  After all the magic of data transformation, you should be able to whip up a dataset in the following format (take note that "weight" is a number from 0 to 1, which describes how heavy you trade with the target country):  </li>
+<li><p style="padding-left:30px;"> Data transformation (spelling, data reshape, etc.) was in STATA.  After all the magic of data transformation, you should be able to whip up a dataset in the following format (take note that "weight" is a number from 0 to 1, which describes how heavy you trade with the target country):
 <pre><code>	Source		Target		weight
 0	Algeria		Lithuania	0.01
 1	Argentina	Australia	0.02
@@ -77,13 +77,9 @@
 7	Argentina	China		0.05
 8	Argentina	ChinaHongKong	0.01
 
-*The thing to note here is that it will initially be a very dense network, as each country is connected to at least 200 countries.
-
-*So for purposes of simplification, I eliminated those with weights near-zero. Example, if Russia trades with the Cook Islands with a value of 0.0001, that connection is eliminated.  This leaves me with a network which I can work with for analysis.
-
-*Suggestion for further study: if one were to study small island states (and I have done work on them before too), one can just filter on these near-zero weights and analyze them separately. But I don't cover them here.
-</code></pre>	
-	<li>I used this neat little freeware called <a href="https://gephi.org">Gephi</a>. It has a decent amount of graph layouts and a host of network statistics available for analysis, which you can test and play around with. It took me a number of youtube videos to come up with my desired visualization, such as making sure that Gephi reads my data as an "undirected" graph.  <i><p style="font-size:12px"> A directed graph is one-way, but since I was using data from both ways (exports and imports) it had to be undirected.  One can figure this out from playing with the tool for a while, plus watching youtube tutorials.  I suggest the one by <a href="https://www.youtube.com/watch?v=HJ4Hcq3YX4k"> Jen Golbeck </a>. There was a point I even tracked her down at UMd and emailed her!</p></i></li>
+</code></pre>
+<i><p style="font-size:12px"> The thing to note here is that it will initially be a very dense network, as each country is connected to at least 200 countries. So for purposes of simplification, I eliminated those with weights near-zero. Example, if Russia trades with the Cook Islands with a value of 0.0001, that connection is eliminated.  This leaves me with a network which I can work with for analysis. Suggestion for further study: if one were to study small island states (and I have done work on them before too), one can just filter on these near-zero weights and analyze them separately. But I don't cover them here.</p></i></li>	
+<li>I used this neat little freeware called <a href="https://gephi.org">Gephi</a>. It has a decent amount of graph layouts and a host of network statistics available for analysis, which you can test and play around with. It took me a number of youtube videos to come up with my desired visualization, such as making sure that Gephi reads my data as an "undirected" graph.  <i><p style="font-size:12px"> A directed graph is one-way, but since I was using data from both ways (exports and imports) it had to be undirected.  One can figure this out from playing with the tool for a while, plus watching youtube tutorials.  I suggest the one by <a href="https://www.youtube.com/watch?v=HJ4Hcq3YX4k"> Jen Golbeck </a>. There was a point I even tracked her down at UMd and emailed her!</p></i></li>
 </ul>
 							<p>I initially unpacked my network using the standard (force-directed) network layout. But my boss suggested that I visualize them using a geogrpahic layout, which was a great suggestion since it made me realize that it is an intuitive layout for a layman to understand.  Again, the charts below are aggregate trade networks.  The different colors are detected communities/clusters based on the strength of interconnections for a specific group of countries.  This is called <a href="https://github.com/gephi/gephi/wiki/Modularity">"modularity"</a> and is computed in Gephi.  Basically, high modularity means strong clustering. </p>
 							<p style="font-size:11px;">All images are the author's own.</p>
