@@ -8,10 +8,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../../images/logo1.png">
-		<title>Is USA's unemployment really that huuuuge? - LMT</title>
-		<meta name="title" content="Is USA's unemployment really that huuuuge?">
-		<meta name="description" content="Comparing US unemployment with the rest of the OECD">
-  		<meta name="keywords" content="huuuge, unemployment, america, data science blog, machine learning, carla intal, carlaint, tableau, laymans terms, lame man terms, macroeconomics">
+		<title>The link between globalization and inequality - LMT</title>
+		<meta name="title" content="The link between globalization and inequality">
+		<meta name="description" content="Playing the blame game on trade and whether it resulted in the loss of jobs in the US.">
+  		<meta name="keywords" content="NAFTA, globalization, trade, income inequality, gini, carla intal, carlaint, tableau, laymans terms, lame man terms, macroeconomics">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -43,41 +43,54 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Is USA's unemployment really that HUUUUUGE?</h1>
-										<p>April 2, 2017</p>
+										<h1>The link between globalization and inequality</h1>
+										<p>March 23, 2017</p>
 									</header>
 
-<p>One of my new pastimes is to use the <a href="https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx">IMF's WEO data </a> to validate the outlandish claims of the US president on almost every topic he can get his hands on.</p>
-<p>The topic for today is US labor statistics.  He had recently made a statement:</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/XFoz6cSGLek?start=9" frameborder="0" allowfullscreen></iframe></p>							
-<p>This is a staggering soundbyte, and quite a compelling number: <span style="font-size: 20px; line-height: 1.5em;"> <i>94 million! Out of the labor force!</i></span>  But the rhetoric is rather strategic, arguably masterfully crafted to deceive.</p>
+									<p>This visualization is motivated by the notion that<p>
 
-<h2>It is quite convenient to misconstrue <span style="color:#f56a6a;">"Out of the labor force" to mean "Unemployment"</span>, but they mean two different things.</h2>
-<p>I initially wanted to create an interactive data visualization to explain the differences in terminology, until I realized that the concept is better explained through a static infographic.  I've never created one before, but I have ample experience in photoshop and came up with this:</p>
+									<h2><center><span style="color:#f56a6a;">Globalization is what's causing income inequality in America.</h2></center></span>
 
-<center><img src="../../images/ig_unemployment.jpg" alt="" /></center>
+									<p>Simply put, there is a view that trade agreements have allowed cheaper goods to come into U.S. shores, thus killing domestic jobs in factories, manufacturing, agriculture, automation, etc.  So, while the richest Americans, <strong>(or the 1%) </strong>keep on getting richer, the common worker <strong>(or the 99%)</strong> is left behind.</p>
 
-<hr class="major" />
 
-<p>Mr. Trump's statement is <strong> valid but misleading</strong>.  Yes, over 90 million Americans are out of the labor force.  This does not mean that they are unemployed.  They are not even counted as part of the workforce!  The real unemployment number is <i>15 million</i>, which is quite comparable to its peers in the OECD, as I illustrate in the chart below.</p>
+									<hr class="major" />
 
-<hr class="major" />
+									<p>To investigate, I plotted the countries of the world on an axis, with globalization on the X, and equality on the Y.  And as a tribute to my data hero <span style="font-size: 20px; color:#f56a6a;"> Hans Rosling (RIP) </span>, I allow these plots to play out over time, to see how inequality has changed with globalization.</p>
+
+									<p>I also used three measures of globalization.
+										<ul>
+											<li>Trade, or opening one's borders to the flow of goods;</li>
+											<li>Finance, or reducing restrictions on the flow of money;</li>
+											<li>Migration, or opening one's borders to people (potentially a source of productive labor for the economy).</li>
+										</ul>
+									</p>
+
+									<hr class="major" />
 
 									<div class="box">
 									<div style="font-size: 20px; line-height: 1.5em; color:#3d4449;;">
-									<i class="fa fa-hand-o-up fa-4" aria-hidden="true"></i> Quick tip
-									</div> The <span style="font-size: 20px; color:#f56a6a;">red bars </span> denote unemployment.  The <span style="font-size: 20px;"> gray bars </span>denote the non-working age population, which is the economic term for people who are too old or too young to work. (Data is for the year 2014, from the latest OECD employment report.)
+									<i class="fa fa-hand-o-up fa-4" aria-hidden="true"></i> Quick start tip
+									</div> Select a globalization indicator, and press "play" to show the movement of inequality vis-a-vis globalization over time.  The size of the bubbles denote the size of the economy.
 									</div> 
 
 
-<div class='tableauPlaceholder' id='viz1491102033514' style='position: relative'><noscript><a href='#'><img alt='Populations of selected OECD countries, 2014 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;On&#47;OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;On&#47;OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1491102033514');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.height='869px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-<p></p>
+<div class='tableauPlaceholder' id='viz1495136934413' style='position: relative'><noscript><a href='http:&#47;&#47;carlaintal.com'><img alt='How does globalization affect income and inequality across countries? ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2017-02-09GlobalizationInequalityMeasures&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='2017-02-09GlobalizationInequalityMeasures&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2017-02-09GlobalizationInequalityMeasures&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1495136934413');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
+								
+								<p></p>
 
-<hr class="major" />
+								<hr class="major" />
+
+
+								<h2>Explore on your own!</h2>
+								<ul class="alt">
+									<li> Notice that different income groups have different responses to globalization: <br><br>
+										<h3><span style="color:#f56a6a;"> <center> As low-income economies globalize, they become more unequal. <br> <i>In contrast</i>, emerging economies seem to  have more equal societies in line with a globalized economy.</center> </h3> </span> Perhaps, there is a <strong>hump-shaped</strong> trajectory, such that economies in the low-end of the development spectrum start to feel the pains of globalization through inequality, but as the country moves further to prosperity, the whole population begins to benefit. And, finally, in more advanced stages of development, the distributional effects of globalization taper off and stabilize.  Hence, <br><br><h3> <span style="color:#f56a6a;"> <center> Advanced economies do not seem to be greatly impacted by income inequality.</center></h3></span> 
+									</li>
 
 								<hr class="major" />
 								<h2>Reference</h2>
-									<p>IMF's World Economic Outlook database.  Available on <a href=http://data.imf.org>data.imf.org; </a>OECDStat; and the US Bureau of Labor Statistics.</p>
+									<p>IMF's World Economic Outlook database.  Available on <a href=http://data.imf.org>data.imf.org; </a>World Bank's WDI; and the Chinn-Ito Database.</p>
 
 									<hr class="major" />
 
