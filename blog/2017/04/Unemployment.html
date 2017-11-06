@@ -8,13 +8,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../../../images/logo1.png">
-		<title>In *Lame* Man's Terms.. a data blog by Carla Intal</title>
-		<meta charset="utf-8" />
-		<meta name="title" content="In Lame Man (Layman)'s Terms...">
-		<meta name="description" content="A blog that discusses macro topics in plain english">
-  		<meta name="keywords" content="carla intal, carlaint, macroeconomics, layman's terms, lame man terms, LMT, lame man's terms, tableau">
+		<title>Is USA's unemployment really that huuuuge? - LMT</title>
+		<meta name="title" content="Is USA's unemployment really that huuuuge?">
+		<meta name="description" content="Comparing US unemployment with the rest of the OECD">
+  		<meta name="keywords" content="huuuge, unemployment, america, data science blog, machine learning, carla intal, carlaint, tableau, laymans terms, lame man terms, macroeconomics">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
 		<link rel="stylesheet" href="../../../assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -91,37 +91,40 @@
 
 								<article>
 									<header>
-										<h2>No Sidebar</h2>
-										<p>All content, all the time.</p>
-										<p style="font-size:14px;font-family:Courier New">Filed under <a href="../../../tags/datasci.html">Data Science</a></0>
+										<h2>Is USA's unemployment really that HUUUUUGE?</h2>
+										<p>April 2, 2017</p>
+										<p style="font-size:14px;font-family:Courier New">Filed under <a href="../../../tags/dataviz.html">Data Viz</a></0>
 									</header>
+									<hr>
 
-									<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
+									<p>One of my new pastimes is to use the <a href="https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx">IMF's WEO data </a> to validate the outlandish claims of the US president on almost every topic he can get his hands on.</p>
+									<p>The topic for today is US labor statistics.  He had recently made a statement:</p>
+									<p><iframe width="560" height="315" src="https://www.youtube.com/embed/XFoz6cSGLek?start=9" frameborder="0" allowfullscreen></iframe></p>							
+									<p>This is a staggering soundbyte, and quite a compelling number: <span style="font-size: 20px; line-height: 1.5em;"> <i>94 million! Out of the labor force!</i></span>  But the rhetoric is rather strategic, arguably masterfully crafted to deceive.</p>
 
-									<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-									Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-									Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-									consequat etiam lorem ipsum dolor sit amet nullam.</p>
+									<h3>It is quite convenient to misconstrue <span style="color:#37c0fb;">"Out of the labor force" to mean "Unemployment"</span>, but they mean two different things.</h3>
+									<br>
+									<p>I initially wanted to create an interactive data visualization to explain the differences in terminology, until I realized that the concept is better explained through a static infographic.  I've never created one before, but I have ample experience in photoshop and came up with this:</p>
 
-									<h3>And Yet Another Subheading</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-									justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-									ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-									vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-									Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-									rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-									Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-									Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
+									<center><img src="../../../images/ig_unemployment.jpg" alt="" /></center>
 
-									<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-									quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-									Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-									fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-									Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-									Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-								
+									<hr>
+									<br>	
+									<p>Mr. Trump's statement is <strong> valid but misleading</strong>.  Yes, over 90 million Americans are out of the labor force.  This does not mean that they are unemployed.  They are not even counted as part of the workforce!  The real unemployment number is <i>15 million</i>, which is quite comparable to its peers in the OECD, as I illustrate in the chart below.</p>
 
-								<hr class="major" />
+									<hr>
+
+									<div class="box">
+									<div style="font-size: 20px; line-height: 1.5em; color:#3d4449;;">
+									<i class="fa fa-hand-o-up fa-4" aria-hidden="true"></i> Quick tip
+									</div> The <span style="font-size: 20px; color:#37c0fb;">red bars </span> denote unemployment.  The <span style="font-size: 20px;"> gray bars </span>denote the non-working age population, which is the economic term for people who are too old or too young to work. (Data is for the year 2014, from the latest OECD employment report.)
+									</div> 
+
+
+									<div class='tableauPlaceholder' id='viz1491102033514' style='position: relative'><noscript><a href='#'><img alt='Populations of selected OECD countries, 2014 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;On&#47;OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;On&#47;OnMr_Trumpsclaimthat94millionpeopleareoutofthelaborforce___&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1491102033514');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.height='869px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+									<p></p>
+
+									<hr>
 
 									<div id="disqus_thread"></div>
 									<script>
