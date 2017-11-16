@@ -64,7 +64,13 @@
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
-	}
+
+	    white-space: pre-wrap;       /* Since CSS 2.1 */
+	    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	    white-space: -pre-wrap;      /* Opera 4-6 */
+	    white-space: -o-pre-wrap;    /* Opera 7 */
+	    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+		}
 
 		pre code {
 			display: block;
@@ -72,6 +78,9 @@
 			padding: 1em 1.5em;
 			overflow-x: auto;
 		}
+
+
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -2587,6 +2596,55 @@
 				vertical-align: middle;
 				margin-left: 1em;
 			}
+
+
+/*for sub-pages*/
+
+	#banner2 {
+		background-position: center center;
+		background-size: cover;
+		height: 10em;
+		text-align: center;
+		position: relative;
+	}
+
+
+		#banner2 header {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: #212121;
+			background: rgba(27, 27, 27, 0.75);
+			color: #fff;
+			padding: 1em 0;
+		}
+
+			#banner2 header h2 {
+				display: inline-block;
+				margin: 0;
+				font-size: 1em;
+				vertical-align: middle;
+			}
+
+				#banner2 header h2 em {
+					opacity: 0.75;
+				}
+
+				#banner2 header h2 a {
+					border-bottom-color: rgba(255, 255, 255, 0.5);
+				}
+
+					#banner2 header h2 a:hover {
+						border-bottom-color: transparent;
+					}
+
+			#banner2 header .button {
+				vertical-align: middle;
+				margin-left: 1em;
+			}
+
+
 
 /* Wrapper */
 
