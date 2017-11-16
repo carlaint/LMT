@@ -2346,7 +2346,7 @@
 			font-size: 0.8em;
 		}
 
-/* Box 
+/* Box  */
 
 	.box.highlight {
 		text-align: center;
@@ -2376,9 +2376,6 @@
 			margin: 0;
 		}
 
-*/
-
-/* Box */
 
 	.box {
 		border-radius: 0.375em;
@@ -2661,6 +2658,14 @@
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
 			background-position: top left,						bottom left,					top left;
 			background-size: 100% 6em,						100% 6em,						auto;
+			background-repeat: no-repeat,						no-repeat,						repeat;
+		}
+
+		.wrapper.style2a {
+			background-color: #fff;
+			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
+			background-position: top left,						bottom left,					top left;
+			background-size: 200% 6em,						200% 6em,						auto;
 			background-repeat: no-repeat,						no-repeat,						repeat;
 		}
 
